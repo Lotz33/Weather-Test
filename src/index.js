@@ -2,23 +2,15 @@
 
 function changeDate() {
   let now = new Date();
-  let days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday"
-  ];
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   let day = days[now.getDay()];
   let h = now.getHours();
   if (h < 10) {
-    let h = `0${h}`;
+    h = `0${h}`;
   }
   let m = now.getMinutes();
   if (m < 10) {
-    let m = `0${m}`;
+    m = `0${m}`;
   }
   let time = h + ":" + m;
 
@@ -44,15 +36,10 @@ function showTemp(response) {
   let cityName = response.data.name;
   document.querySelector("#degrees").innerHTML = `${temp}`;
   document.querySelector("#city-name").innerHTML = `${cityName}`;
-  document.querySelector(
-    "#rain-question"
-  ).innerHTML = `Is it currently raining in ${cityName} ?`;
+  document.querySelector("#rain-question").innerHTML = `Is it currently raining in ${cityName} ?`;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
 }
 
 function input(event) {
@@ -74,9 +61,7 @@ function showLocation(position) {
   console.log(lat);
   console.log(lon);
 
-  axios
-    .get(`${apiUrl}lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`)
-    .then(showTemp);
+  axios.get(`${apiUrl}lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`).then(showTemp);
 }
 
 function getCurrentPosition() {
