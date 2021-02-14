@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather-Test App</title>
   </head>
+
   <body>
     <div class="container">
       <div class="card-header">
@@ -19,14 +20,14 @@
       </div>
       <div class="card-panel">
         <div class="row">
-          <div class="col m-3">
+          <div class="col-8">
             <div class="cardbody-question" id="rain-question">Is it currently raining in xxx?</div>
             <p class="card-text">
               <strong>Yes</strong>, take a brolly!
               <i class="fas fa-umbrella"></i>
             </p>
           </div>
-          <div class="col m-3">
+          <div class="col-4">
             <form id="form-search">
               <input type="search" class="form-control" id="search-input" placeholder="Search for a city..." autocomplete="off" />
               <input type="submit" value="Search" /> <br />
@@ -40,7 +41,7 @@
       </div>
       <div class="card-group">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body-left">
             <h5 class="card-title" id="city-name">xxx</h5>
             <br />
             <ul>
@@ -52,20 +53,21 @@
             </ul>
           </div>
         </div>
-        <div class="card text-end" style="width: 18rem">
-          <div class="card-body">
+        <div class="card" style="border-top-right-radius: 6px; border-bottom-right-radius: 6px">
+          <div class="card-body-right">
             <h2>
               <span class="card-title" id="degrees">18</span>
-              <span id="celsius">°C</span>
-              <!-- <a href="#" id="celsius-link">℃</a> |
-                <a href="#" id="fahrenheit-link">℉</a>  -->
+              <span id="units">
+                <a href="#" id="celsius-link">℃</a> |
+                <a href="#" id="fahrenheit-link">℉</a>
+              </span>
               <br />
               <br />
               <i class="fas fa-cloud-sun"></i>
             </h2>
           </div>
         </div>
-        <div class="card ms-3">
+        <div class="card ms-3" style="border-top-left-radius: 6px; border-bottom-left-radius: 6px">
           <div class="card-body">
             <h5 class="cardbody-question">5 day forecast:</h5>
 

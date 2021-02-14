@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-family: "Pacifico", cursive;
-  padding: 10px;
+  /* padding: 10px; */
   color: #fff;
 }
 td {
@@ -15,50 +15,83 @@ td {
 
 li {
   list-style: none;
-z
 }
+
 ul {
-  padding: 0;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #00587a;
+}
+
+.container {
+  min-width: 800px;
+  max-width: 800px;
+  margin: 30px auto;
 }
 
 .fa-location-arrow {
   color: white;
 }
+
 .card {
   border: transparent;
   background-color: #a3d2ca;
   border-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
+
 .card-header:first-child {
   border-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
+
 .card-header {
   background-color: #5eaaa8;
   border: transparent;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 20px 10px;
 }
+
 .card-panel {
   background-color: #a3d2ca;
   border: transparent;
   border-radius: 6px;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 10px;
 }
+
+.card-text {
+  margin-top: 0;
+  font-size: 20px;
+  color: #db6400;
+}
+
 .cardbody-question {
   padding-top: 5px;
   font-size: 20px;
   font-weight: bold;
 }
 
+.card-body-left,
+.card-body-right {
+  padding: 12px;
+}
+
+.card-body-right {
+  text-align: right;
+}
+
 .card-title {
   font-size: 38px;
   font-weight: bold;
   color: #db6400;
-}
-
-.card-text {
-  padding-top: 20px;
 }
 
 .fa-cloud-sun:before {
@@ -73,7 +106,7 @@ ul {
 }
 
 .card-text {
-  margin-top: 10px;
+  margin: 10px 0px;
   font-size: 20px;
   color: #db6400;
 }
@@ -94,4 +127,25 @@ ul {
   border-top: transparent;
   text-align: center;
   color: #5eaaa8;
+}
+
+.form-control {
+  display: inline;
+  width: 70%;
+}
+
+#form-search {
+  float: right;
+  display: inline;
+}
+
+input[type="submit" i] {
+  height: 36px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #5eaaa8;
+  border-color: #5eaaa8;
+  padding: 1px 6px;
+  border-width: 0.5px;
+  border-style: none;
 }
