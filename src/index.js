@@ -16,7 +16,7 @@ function changeDate() {
 
   let dateTime = document.querySelector("#date-time");
 
-  dateTime.innerHTML = `${day}  |   ${time}`;
+  dateTime.innerHTML = `Last updated: ${day}  |   ${time}`;
 }
 
 changeDate();
@@ -40,6 +40,8 @@ function showTemp(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
+  document.querySelector("#high").innerHTML = Math.round(response.data.main.temp_max);
+  document.querySelector("#low").innerHTML = Math.round(response.data.main.temp_min);
 }
 
 function input(event) {
