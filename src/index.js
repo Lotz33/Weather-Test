@@ -34,6 +34,8 @@ function showTemp(response) {
   let temp = Math.round(response.data.main.temp);
   // console.log(temp);
   let cityName = response.data.name;
+  celsiusTemp = response.data.main.temp;
+
   document.querySelector("#degrees").innerHTML = `${temp}`;
   document.querySelector("#city-name").innerHTML = `${cityName}`;
   document.querySelector("#rain-question").innerHTML = `Is it currently raining in ${cityName} ?`;
@@ -75,25 +77,30 @@ function getCurrentPosition() {
 let button = document.querySelector("#location");
 button.addEventListener("click", getCurrentPosition);
 
-search("London, uk");
-
 ///////////////////////// CONVERT TEMP UNITS
 
-// function convertToFahrenheit(event) {
-//   event.preventDefault();
-//   let tempElement = document.querySelector("#temperature");
-//   let temp = tempElement.innerHTML;
-//   tempElement.innerHTML = Math.round((temp * 9) / 5 + 32);
-// }
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#degrees");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  tempElement.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
+}
 
-// function convertToCelsius(event) {
-//   event.preventDefault();
-//   let tempElement = document.querySelector("#temperature");
-//   tempElement.innerHTML = 18;
-// }
+function convertToCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#degrees");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
 
-// let fahrenheitLink = document.querySelector("#fahrenheit-link");
-// fahrenheitLink.addEventListener("click", convertToFahrenheit);
+let celsiusTemp = null;
 
-// let celsiusLink = document.querySelector("#celsius-link");
-// celsiusLink.addEventListener("click", convertToCelsius);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+search("London, uk");

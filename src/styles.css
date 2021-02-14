@@ -27,7 +27,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #00587a;
+  color: #5eaaa8;
 }
 img {
   width: 60%;
@@ -155,4 +155,14 @@ input[type="submit" i] {
   padding: 1px 6px;
   border-width: 0.5px;
   border-style: none;
+}
+
+.active {
+  color: #00587a;
+  cursor: default;
+}
+
+.active:hover {
+  color: #00587a;
+  cursor: default;
 }
