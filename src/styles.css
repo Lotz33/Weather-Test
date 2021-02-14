@@ -9,6 +9,9 @@ h1 {
   /* padding: 10px; */
   color: #fff;
 }
+h5 {
+  margin-bottom: 20px;
+}
 td {
   color: #00587a;
 }
@@ -29,8 +32,38 @@ a {
   text-decoration: none;
   color: #5eaaa8;
 }
-img {
+
+.table {
+  margin-bottom: 0px;
+}
+
+.table > :not(caption) > * > * {
+  width: 40px;
+  border-color: #ffffff;
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  top: -10px;
+}
+
+/* img {
+  display: block;
+  position: relative;
+  bottom: 4px;
+} */
+
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: #ffffff;
+}
+
+#icon1 {
   width: 60%;
+}
+
+#icon2 {
+  width: 70%;
+  float: right;
 }
 
 .container {
