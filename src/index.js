@@ -50,7 +50,7 @@ function showForecast(response) {
  
     <td>${formatHours(forecast.dt * 1000)}</td>
     <td >${Math.round(forecast.main.temp_max)}°C | ${Math.round(forecast.main.temp_min)}°C</td>
-    <td><img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="" id="icon2" class="float-right"/></td>
+    <td><img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="" id="icon2" class="float-right"/></td>
   
   `;
   }
@@ -79,7 +79,7 @@ function showTemp(response) {
   document.querySelector("#description").innerHTML = response.data.weather[0].description;
   document.querySelector("#high").innerHTML = Math.round(response.data.main.temp_max);
   document.querySelector("#low").innerHTML = Math.round(response.data.main.temp_min);
-  document.querySelector("#icon1").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#icon1").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.querySelector("#icon1").setAttribute("alt", response.data.weather[0].description);
 
   let weather = response.data.weather[0].main;
