@@ -1,7 +1,7 @@
 ///////////////////////// SHOW DATE
 
-function changeDate() {
-  let now = new Date();
+function changeDate(timestamp) {
+  let now = new Date(timestamp);
   console.log(now);
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[now.getDay()];
